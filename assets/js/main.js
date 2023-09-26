@@ -13,11 +13,13 @@
 	const section = [home, about, resume, mySkills, portfolio, contact];
 	const sidebarNav = document.querySelectorAll(".nav-click");
 	const responsiveSidebarNav = document.querySelectorAll(".respon-nav-click");
+	const GoPortfolioBtn = document.querySelector(".go-portfolio-btn");
 
 	// Nav Scroll Evnet
 	function navClick() {
 		for (let i = 0; i < sidebarNav.length; i++) {
 			sidebarNav[i].addEventListener("click", (e) => {
+				e.preventDefault();
 				window.scroll({
 					top: section[i].offsetTop,
 					behavior: "smooth",
@@ -27,12 +29,15 @@
 
 		for (let i = 0; i < responsiveSidebarNav.length; i++) {
 			responsiveSidebarNav[i].addEventListener("click", (e) => {
+				e.preventDefault();
 				window.scroll({
 					top: section[i].offsetTop,
 					behavior: "smooth",
 				});
+				setTimeout(() => {
+					reponsiveSideBar.classList.remove("active");
+				}, 500);
 			});
-
 		}
 	}
 
@@ -62,18 +67,32 @@
 
 	// ICON Toggle Event
 	function iconClick() {
-		iconMenu.addEventListener("click", () => {
+		iconMenu.addEventListener("click", (e) => {
+			e.preventDefault();
 			reponsiveSideBar.classList.add("active");
 		});
-		reponsiveSideBarOverlay.addEventListener("click", () => {
+		reponsiveSideBarOverlay.addEventListener("click", (e) => {
+			e.preventDefault();
 			reponsiveSideBar.classList.remove("active");
 		});
 	}
 
+	// Go Portfilio Btn Event
+	function GoPortfolio() {
+		GoPortfolioBtn.addEventListener("click", (e) => {
+			e.preventDefault();
+
+			window.scroll({
+				top: portfolio.offsetTop,
+				behavior: "smooth",
+			});
+		});
+	}
+
 	window.addEventListener("click", (e) => {
-		e.preventDefault();
 		navClick();
 		iconClick();
+		GoPortfolio();
 	});
 
 	window.addEventListener("scroll", () => {
