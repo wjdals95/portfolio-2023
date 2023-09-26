@@ -68,11 +68,9 @@
 	// ICON Toggle Event
 	function iconClick() {
 		iconMenu.addEventListener("click", (e) => {
-			e.preventDefault();
 			reponsiveSideBar.classList.add("active");
 		});
 		reponsiveSideBarOverlay.addEventListener("click", (e) => {
-			e.preventDefault();
 			reponsiveSideBar.classList.remove("active");
 		});
 	}
