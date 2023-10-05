@@ -43,7 +43,14 @@
     1250px
 
 --------------------------------------------- */
-
+@media (min-width: 1251px) {
+	.icon-menu:hover {
+	border-color: #28e98c;
+}
+.icon-menu:hover .bar {
+	background-color: #28e98c;
+}
+}
 @media (max-width: 1250px) {
 	.custom-container {
 		max-width: 800px;
@@ -104,7 +111,7 @@
 	}
 	.home-section .section-header h1 {
 		font-size: 54px;
-		    line-height: 65px;
+		line-height: 65px;
 	}
 	.about-section .content-width p {
 		font-size: 20px;
@@ -141,8 +148,8 @@
 		padding: 0 0 50px 50px;
 	}
 	.resume-section .resume-timeline .resume-item:nth-last-of-type(1) {
-    padding: 0 0 0 50px;
-}
+		padding: 0 0 0 50px;
+	}
 	.portfolio-section
 		.portfolio-items
 		.portfolio-item.portfolio-full
@@ -162,14 +169,14 @@
 
 @media (max-width: 500px) {
 	.home-section .section-header h1 {
-    line-height: 50px;
-}
+		line-height: 50px;
+	}
 	.resume-section .resume-timeline .resume-item {
 		padding: 0 0 50px 30px;
 	}
 	.resume-section .resume-timeline .resume-item:nth-last-of-type(1) {
-    padding: 0 0 0 30px;
-}
+		padding: 0 0 0 30px;
+	}
 }
 
 /* -------------------------------------------
@@ -198,13 +205,13 @@
 
 @media (max-width: 360px) {
 	.myinfo-card .myinfo-header p {
-    font-size: 23px;
-}
-.myinfo-card .myinfo-header span {
-    font-size: 15px;
-}
-.myinfo-card .myphoto {
-    height: 250px;
-    width: 250px;
-}
+		font-size: 23px;
+	}
+	.myinfo-card .myinfo-header span {
+		font-size: 15px;
+	}
+	.myinfo-card .myphoto {
+		height: 250px;
+		width: 250px;
+	}
 }

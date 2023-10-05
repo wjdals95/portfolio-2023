@@ -15,6 +15,16 @@
 	const responsiveSidebarNav = document.querySelectorAll(".respon-nav-click");
 	const GoPortfolioBtn = document.querySelector(".go-portfolio-btn");
 
+	// ICON Toggle Event
+	function iconClick() {
+		iconMenu.addEventListener("click", () => {
+			reponsiveSideBar.classList.add("active");
+		});
+		reponsiveSideBarOverlay.addEventListener("click", (e) => {
+			reponsiveSideBar.classList.remove("active");
+		});
+	}
+
 	// Nav Scroll Evnet
 	function navClick() {
 		for (let i = 0; i < sidebarNav.length; i++) {
@@ -65,16 +75,6 @@
 		}
 	}
 
-	// ICON Toggle Event
-	function iconClick() {
-		iconMenu.addEventListener("click", (e) => {
-			reponsiveSideBar.classList.add("active");
-		});
-		reponsiveSideBarOverlay.addEventListener("click", (e) => {
-			reponsiveSideBar.classList.remove("active");
-		});
-	}
-
 	// Go Portfilio Btn Event
 	function GoPortfolio() {
 		GoPortfolioBtn.addEventListener("click", (e) => {
@@ -88,8 +88,8 @@
 	}
 
 	window.addEventListener("click", (e) => {
-		navClick();
 		iconClick();
+		navClick();
 		GoPortfolio();
 	});
 

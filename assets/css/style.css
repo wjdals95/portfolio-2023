@@ -21,6 +21,7 @@
 	left: 10px;
 	transform: translateY(-50%);
 	transition: 0.3s;
+	cursor: pointer;
 }
 .icon-menu .bar:first-child {
 	top: 40%;
@@ -28,12 +29,12 @@
 .icon-menu .bar:last-child {
 	top: 60%;
 }
-.icon-menu:hover {
+/* .icon-menu:hover {
 	border-color: #28e98c;
 }
 .icon-menu:hover .bar {
 	background-color: #28e98c;
-}
+} */
 
 /* ############### REPONSIVE-SIDEBAR-MENU SECTION ############### */
 .responsive-sidebar-menu {
